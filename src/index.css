@@ -1,0 +1,44 @@
+body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+canvas { 
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.content {
+    color: white;
+    display: flex; 
+    flex-direction: column;
+    font-size: 3em;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%; 
+    z-index: 1;
+}
+
+.buttonLayout {
+    position: absolute;
+    left: 0;
+    /* display:inline-block; */
+    /* margin: 5px 5px; */
+    z-index: 2;
+}
+
+button {
+    margin: 30px;
+    font-size: 18px;
+    height: 65px;
+    width: 250px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(219, 219, 219, 0.950);
+    opacity: 75;
+     cursor: pointer;
+}

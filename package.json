@@ -1,0 +1,36 @@
+{
+  "name": "web-interactive-turn-table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack-cli —mode production"
+  },
+  "author": "FX-Wizzard",
+  "license": "MIT",
+  "dependencies": {
+    "gltf-loader-2": "0.0.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "three": "^0.98.0",
+    "three-gltf-loader": "^1.98.0",
+    "three-orbitcontrols": "^2.96.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "resolve": "^1.8.1",
+    "style-loader": "^0.23.1",
+    "uglify-js": "^3.4.9",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

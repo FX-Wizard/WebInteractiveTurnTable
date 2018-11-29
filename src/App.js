@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Viewport from './viewport';
+import RadialMenu from './radialMenu';
 
 class App extends Component {
   constructor(props) {
@@ -13,10 +14,12 @@ class App extends Component {
       wheels: "normal"
     }
   }
+
   componentDidMount() {
     this.view = new Viewport ({
       output: document.getElementById('viewElement')
     });
+    this.view.hideObject("policePackage");
   }
 
   componentDidUpdate() {
@@ -27,7 +30,7 @@ class App extends Component {
     if (this.state.accessories !== "normal") {
       this.view.hideObject("policePackage");
       this.view.hideObject("bluesBrothers");
-      this.view.showObject("hubcaps");
+      this.view.showObject("hub_caps");
       this.state.accessories = "normal";
     }
   }
@@ -36,7 +39,7 @@ class App extends Component {
     if (this.state.accessories !== "policePackage") {
       this.view.showObject("policePackage");
       this.view.hideObject("bluesBrothers");
-      this.view.hideObject("hubcaps");
+      this.view.hideObject("hub_caps");
       this.state.accessories = "policePackage";
     }
   }
@@ -45,7 +48,7 @@ class App extends Component {
     if (this.state.accessories !== "bluesBrothers") {
       this.view.hideObject("policePackage");
       this.view.showObject("bluesBrothers");
-      this.view.hideObject("hubcaps");
+      this.view.hideObject("hub_caps");
       this.state.accessories = "bluesBrothers";
     }
   }
@@ -54,11 +57,12 @@ class App extends Component {
     return (
       <div className="container">
         <div className="content" id="content">
-          <div className="buttonLayout">
-            <button onClick={this.normal} id="changeColourBtn">Normal</button>
-            <button onClick={this.policePackage} id="changeColourBtn">Police</button>
-            <button onClick={this.bluesmobile} id="changeColourBtn">Bluesmobile</button>
-          </div>
+          <RadialMenu
+            normal={this.normal.bind(this)}
+            policePackage={this.policePackage.bind(this)}
+            bluesmobile={this.bluesmobile.bind(this)}
+          >
+          </RadialMenu>
         </div>
         <div id="viewElement"></div>
       </div>

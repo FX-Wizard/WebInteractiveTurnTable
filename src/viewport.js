@@ -5,7 +5,7 @@ import GLTFLoader from 'three-gltf-loader';
 import monaco from './assets/dodgeMonacoBody.gltf';
 import hubcaps from './assets/hubcaps.gltf';
 import policePackage from './assets/policePackage.gltf';
-import bluesmoblie from './assets/bluesmobile.gltf';
+import bluesmoblie from './assets/bluesBrothers.gltf';
 
 class Viewport {
 
@@ -55,8 +55,6 @@ class Viewport {
       this.assetLoader(policePackage);
       this.assetLoader(bluesmoblie);
       this.assetLoader(monaco);
-      this.hideObject("policePackage");
-      this.hideObject("bluesBrothers");
       
       // render
       this.render();
@@ -71,9 +69,9 @@ class Viewport {
       const loader = new GLTFLoader();
 
       loader.parse(asset, "", (gltf) => {
+        console.log("asset name:", asset)
         this.scene.add(gltf.scene);
-      });
-      console.log("loader:", loader);
+      })
     }
 
     test() {

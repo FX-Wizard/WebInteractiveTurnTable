@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack-cli —mode production"
+    "build": "webpack-cli --progress --mode production"
   },
   "author": "FX-Wizzard",
   "license": "MIT",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "gltf-loader-2": "0.0.3",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -27,7 +28,6 @@
     "html-webpack-plugin": "^3.2.0",
     "resolve": "^1.8.1",
     "style-loader": "^0.23.1",
-    "uglify-js": "^3.4.9",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",

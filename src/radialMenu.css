@@ -1,0 +1,89 @@
+.radial-menu {
+    bottom: 2px;
+    left: 2px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    z-index: 20;
+  }
+  
+  .MainButton {
+    bottom: inherit;
+    left: inherit;
+    width: 75px;
+    height: 75px;
+    background: darkSlateGray;
+    border-radius: 50%;
+    z-index: 21;
+    color: white;
+    text-align: center;
+    line-height: 90px;
+    cursor: pointer;
+    position: fixed;
+    transition: all .2s ease-in;
+    border: 0 none;
+    outline-style: none;
+  }
+  
+  .MainButton-triggered {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  
+  .MainButton:hover{
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  
+  .MainButton-triggered:hover {
+    -webkit-transform: scale(1.1) rotate(45deg);
+            transform: scale(1.1) rotate(45deg);
+  }
+  
+  .Button {
+    width: 120px;
+    height: 60%;
+    background-color: dimGray;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    z-index: 19;
+    transition: all .2s ease-in;
+    outline-style: none;
+    transform: scale(0.01)
+  }
+  
+  .Button-triggered {
+    -webkit-transform: rotate(-100deg) translate(8em) rotate(100deg) scale(1);
+            transform: rotate(-100deg) translate(8em) rotate(100deg) scale(1);
+    transition: all 350ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  }
+  
+  .Button-triggered:nth-child(2) {
+    -webkit-transform: rotate(-62deg) translate(8em) rotate(62deg) scale(1);
+            transform: rotate(-62deg) translate(8em) rotate(62deg) scale(1);
+    transition: all 350ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .1s;
+  }
+  
+  .Button-triggered:nth-child(3) {
+    -webkit-transform: rotate(-22deg) translate(8em) rotate(22deg) scale(1);
+            transform: rotate(-22deg) translate(8em) rotate(22deg) scale(1);
+    transition: all 350ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+  }
+  
+  .Button-triggered:nth-child(4) {
+    -webkit-transform: rotate(10deg) translate(8em) rotate(-10deg) scale(1);
+            transform: rotate(10deg) translate(8em) rotate(-10deg) scale(1);
+    transition: all 350ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .3s;
+  }
+  
+  .Button:hover{
+    opacity: 0.8;
+    transition: 100ms;
+  }

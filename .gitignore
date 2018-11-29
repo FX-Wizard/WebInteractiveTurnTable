@@ -1,14 +1,22 @@
-# 3d assets folder
-*/assets
+# 3d assets
+**/assets
+**/*.gltf
+**/*.glb
+**/*.bin
+**/*.png
 
 # node stuff
-node_modules 
+node_modules
+
+# file system stuff
+.DS_Store
 
 # Distribution / packaging
 .Python
 build/
 develop-eggs/
 dist/
+dist.zip
 downloads/
 eggs/
 .eggs/

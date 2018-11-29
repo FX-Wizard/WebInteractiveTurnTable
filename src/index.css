@@ -23,14 +23,6 @@ canvas {
     z-index: 1;
 }
 
-.buttonLayout {
-    position: absolute;
-    left: 0;
-    /* display:inline-block; */
-    /* margin: 5px 5px; */
-    z-index: 2;
-}
-
 button {
     margin: 30px;
     font-size: 18px;

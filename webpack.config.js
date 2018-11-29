@@ -3,8 +3,9 @@ const resolve = require('resolve');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
+
 module.exports = {
-    entry: "./src/index.js",
+    entry: path.join(__dirname, "src/index.js"),
     output: {
         filename: "build.js",
         path: path.join(__dirname, "dist"),
@@ -19,7 +20,7 @@ module.exports = {
             test: /\.css$/,
             use: [
                 {loader: "style-loader"},
-                {loader: "css-loader"}
+                {loader: "css-loader"},
             ]
         },
         {
@@ -37,10 +38,18 @@ module.exports = {
             options: {
                 name: 'assets/[name].[hash:7].[ext]'
             }
-        }]
+        },
+        {
+            test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+            use: [{
+              loader: 'file-loader',
+            }]
+          }]
     },
     optimization: {
-        minimizer: [new UglifyJsPlugin()]
+        minimizer: [new UglifyJsPlugin({
+            test: /\.js(\?.*)?$/i}
+        )]
     },
     plugins: [
         new HtmlWebPackPlugin({

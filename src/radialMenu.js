@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import "./radialMenu.css"
-// import 'font-awesome/fonts/fontawesome-webfont.woff';
 import 'font-awesome/css/font-awesome.min.css';
 
 class RadialMenu extends React.Component {

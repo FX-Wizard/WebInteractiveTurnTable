@@ -19,7 +19,6 @@ class App extends Component {
     this.view = new Viewport ({
       output: document.getElementById('viewElement')
     });
-    this.view.hideObject("policePackage");
   }
 
   componentDidUpdate() {

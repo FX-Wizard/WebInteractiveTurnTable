@@ -63,6 +63,7 @@ function MainButton(props){
         ? "MainButton MainButton-triggered" 
         : "MainButton "}
       onClick={props.toggle}
+      onTouchStart={props.toggle}
     > <a className="fa fa-plus fa-2x"></a>
     </button>
   );
@@ -76,6 +77,7 @@ function Button(props) {
         ? "Button Button-triggered" 
         : "Button "}
       onClick={props.toggle}
+      onTouchStart={props.toggle}
       >
       <a>{props.label}</a>
     </button>

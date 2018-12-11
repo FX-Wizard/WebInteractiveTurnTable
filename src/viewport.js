@@ -55,10 +55,10 @@ class Viewport {
       this.assetLoader(policePackage);
       this.assetLoader(bluesmoblie);
       this.assetLoader(monaco);
-      
+
       // render
       this.render();
-  
+
       // listener
       window.addEventListener('resize', () => {
           this.onResize();
@@ -69,14 +69,14 @@ class Viewport {
       const loader = new GLTFLoader();
 
       loader.parse(asset, "", (gltf) => {
-        console.log("asset name:", asset)
         this.scene.add(gltf.scene);
+        this.assetLoaderOnComplete(asset.name);
       })
     }
 
-    test() {
-      this.testModel = this.assetLoader(bluesmoblie);
-      console.log("model:", this.testModel);
+    assetLoaderOnComplete() {
+      this.hideObject("policePackage");
+      this.hideObject("bluesBrothers");
     }
 
     showObject(name) {
@@ -90,9 +90,11 @@ class Viewport {
     }
 
     hideObject(name) {
+      console.log("something happend")
       this.scene.traverse(
         function(object) {
           if (object.name === name) {
+            console.log("found object:", object.name)
             object.visible = false;
           }
         }
